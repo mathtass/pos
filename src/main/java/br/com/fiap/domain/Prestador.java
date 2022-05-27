@@ -79,6 +79,7 @@ public class Prestador {
 	}
 
 	@Override
+	// Imprime todas as informações da tabela e usa a função prestador.getNome_tipo para imprimir tipo do prestador (foreign key)
 	public String toString() {
 		return id + " - " + nome_prestador + " - " + cidade + "-" + estado + " - " + prestador.getNome_tipo() + " - " + telefone;
 	}

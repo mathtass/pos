@@ -16,29 +16,15 @@ public class Servico {
 			em = Persistence.createEntityManagerFactory("estudando-orm").createEntityManager();
 			PrestadorDAO dao = new PrestadorDAO(em);
 			em.getTransaction().begin();
-			
-			//PrestadorTipo novoTipo = new PrestadorTipo();
-			//novoTipo.setNome_tipo("Tercerizado");
-			
-			//dao.salvar(novoTipo);
-			
-			//PrestadorTipo recuperado = dao.recuperar(3);
-			//System.out.println(recuperado);
-			
+			// Inicia banco de dados, lista todas as linhas da tabela PRESTADOR, incluindo a coluna de foreing key da tabela TIPO_PRESTADOR;
 			
 			System.out.println("\n\n Lista Telefonica:");
 			for(Prestador entidade:dao.listar()) {
 				System.out.println(entidade);	
-			}
-			
-			
+			}		
 			
 			
 			em.getTransaction().commit();
-//			Prestador primeiro = em.find(Prestador.class,1);	
-//			Prestador segundo = em.find(Prestador.class,2);
-//			System.out.println(primeiro);
-//			System.out.println(segundo);
 		
 
 	}catch(Exception e) {
