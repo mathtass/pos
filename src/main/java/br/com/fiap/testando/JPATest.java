@@ -17,7 +17,7 @@ public class JPATest {
 			
 			Estabelecimento recuperado = em.find(Estabelecimento.class,1);
 			System.out.println(recuperado);
-			recuperado.setNome("Escola do Matheus");
+			recuperado.setNome("Escola da Vitoria");
 			em.persist(recuperado);
 			em.getTransaction().commit();
 			System.out.println(recuperado);
